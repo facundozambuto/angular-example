@@ -13,10 +13,6 @@ angular.module('moviesApp')
     {
       'title': 'Listing',
       'link': '/list/'
-    },
-     {
-      'title': 'Todo',
-      'link': '/todo/'
     }];
 
     $scope.isCollapsed = false;

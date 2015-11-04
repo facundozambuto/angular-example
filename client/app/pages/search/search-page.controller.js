@@ -16,7 +16,7 @@
         var vm = this;
         vm.updatedSearch = updatedSearch;
 
-        vm.movies = movies.data.results;
+        vm.movies = movies;
         vm.topMovies = topMovies.data.results;
         vm.topMovieNames = [];
         angular.forEach(vm.topMovies, function (each) {

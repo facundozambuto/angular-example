@@ -21,7 +21,10 @@
         			resolve: {
         				movies: ['$stateParams', 'moviesConnector', function($stateParams, moviesConnector) {
                             if($stateParams.query) {
-				                return moviesConnector.search($stateParams.query);
+				                return moviesConnector.search($stateParams.query)
+                                        .then(function (response) {
+                                            return response.data.results
+                                        });
                             } else {
                                 return [];
                             }

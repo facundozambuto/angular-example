@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+        <script src="/demo/events/events.controller.js"></script>
+
+    </head>
+    <body ng-app="eventExample">
+    <div class="container" ng-controller="EventController">
+    Root scope <tt>MyEvent</tt> count: {{count}}
+    <ul>
+      <li ng-repeat="i in [1]" ng-controller="EventController">
+        <button class="btn btn-primary" ng-click="$emit('MyEvent')">$emit('MyEvent')</button>
+        <button class="btn btn-default" ng-click="$broadcast('MyEvent')">$broadcast('MyEvent')</button>
+        <br>
+        Middle scope <tt>MyEvent</tt> count: {{count}}
+        <ul>
+          <li ng-repeat="item in [1, 2]" ng-controller="EventController">
+          <button class="btn btn-primary" ng-click="$emit('MyEvent')">$emit('MyEvent')</button>
+          <button class="btn btn-default" ng-click="$broadcast('MyEvent')">$broadcast('MyEvent')</button>
+          <br>
+            Leaf scope <tt>MyEvent</tt> count: {{count}}
+
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  </body>
+</html>
