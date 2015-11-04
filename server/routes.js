@@ -8,7 +8,7 @@ var errors = require('./components/errors');
 var path = require('path');
 var express = require('express');
 var serveIndex = require('serve-index')
-var demoDir = path.resolve(__dirname + '../client/demo/');
+var demoDir = path.resolve(__dirname + '/../client/demo/');
 
 module.exports = function(app) {
 
@@ -16,8 +16,7 @@ module.exports = function(app) {
   app.use('/api/things', require('./api/thing'));
   app.use('/api/movies', require('./api/movies'));
   // Serve demo directory
-  app.use('/demo', express.static(demoDir));
-  //app.use('/demo', serveIndex(demoDir, {'icons': true}));
+  app.use('/demo/', serveIndex(demoDir, {'icons': true}));
 
   // All undefined asset or api routes should return a 404
   app.route('/:url(api|auth|components|app|bower_components|assets)/*')
