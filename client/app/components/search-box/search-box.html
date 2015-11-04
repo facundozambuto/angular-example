@@ -1,0 +1,21 @@
+<div class="input-group">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Search movies..."
+    aria-describedby="basic-addon2"
+    ng-model="searchVm.query"
+    ng-model-options="{debounce: 200}"
+    ng-change="searchVm.updatedQuery()">
+  <span class="input-group-addon btn btn-primary" id="basic-addon2" ng-click="searchVm.searchClicked()">Search</span>
+  <div class="results" ng-show="searchVm.showSearch && searchVm.results.length > 0">
+      <ul class="list-group">
+          <li
+            class="list-group-item"
+            ng-click="searchVm.itemSelected(result)"
+            ng-repeat="result in searchVm.results | limitTo: 10">
+                {{result}}
+        </li>
+      </ul>
+  </div>
+</div>
