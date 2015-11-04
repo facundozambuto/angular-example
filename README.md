@@ -1,4 +1,4 @@
-# angular-course
+# angular-example
 Yeoman generated angular fullstack variation with mocha, chai sinon and coverage.
 As an example of an angular course.
 
