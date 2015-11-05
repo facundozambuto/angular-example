@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 angular.module('moviesApp')
   .config(function ($stateProvider) {
@@ -7,5 +7,5 @@ angular.module('moviesApp')
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
-      });*/
-  });
+      });
+  });*/

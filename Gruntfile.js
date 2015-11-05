@@ -688,6 +688,12 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
+  grunt.registerTask('analyze', [
+    'jshint',
+    'test',
+    'test:e2e'
+  ]);
+
   grunt.registerTask('default', [
     'newer:eslint',
     'test',

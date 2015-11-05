@@ -6,7 +6,7 @@
     /* Returns a filter function that split a string into words */
     function wordsFilter() {
         return function(input) {
-            return input.match(/\S+/g) || ''; 
+            return input.match(/\S+/g) || '';
         };
     }
 

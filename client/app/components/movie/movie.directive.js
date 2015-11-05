@@ -9,7 +9,7 @@
             restrict: 'E',
             templateUrl: 'app/components/movie/movie.html',
             scope: {
-                movie: '=',
+                movie: '='
             }
         };
     }

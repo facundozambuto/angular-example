@@ -9,7 +9,7 @@
             restrict: 'E',
             templateUrl: 'app/components/movie-listing/movie-listing.html',
             scope: {
-                movies: '=',
+                movies: '='
             }
         };
     }

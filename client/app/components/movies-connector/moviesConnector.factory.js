@@ -26,7 +26,7 @@
         function topRatedMovies() {
             return $http.get('/api/movies/');
         }
-        
+
         function search(query) {
             return $http.get('/api/movies/search/' + query);
         }
@@ -35,7 +35,7 @@
             if (service.cachedConfiguration) {
                 return $q.when(service.cachedConfiguration);
             }
-            return $http.get('/api/movies/configuration').then(function  (response) {
+            return $http.get('/api/movies/configuration').then(function(response) {
                 service.cachedConfiguration = response;
                 return response;
             });

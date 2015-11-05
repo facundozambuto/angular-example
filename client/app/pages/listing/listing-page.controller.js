@@ -12,7 +12,7 @@
     ];
 
     /* @ngInject */
-    function ListingPageController(movies, configuration, moviesConnector){
+    function ListingPageController(movies, configuration){
         var vm = this;
         vm.configuration = configuration.data;
         vm.movies = movies.data.results;

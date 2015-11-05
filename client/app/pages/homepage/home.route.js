@@ -6,18 +6,18 @@
         .config(configRouteHome);
 
         configRouteHome.$inject = [
-	        '$stateProvider'
+            '$stateProvider'
         ];
 
         function configRouteHome ($stateProvider) {
 
         $stateProvider
           .state('home', {
-        			url: '/',
-        			title: 'Movies Home Page',
+                    url: '/',
+                    title: 'Movies Home Page',
                     templateUrl: 'app/pages/homepage/home.html',
-					controller: 'HomePageController',
-					controllerAs: 'homeVm'
-        		});
+                    controller: 'HomePageController',
+                    controllerAs: 'homeVm'
+                });
         }
 })();

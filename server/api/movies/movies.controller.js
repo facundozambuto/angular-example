@@ -20,11 +20,11 @@ exports.configuration = configuration;
 exports.nowPlaying = nowPlaying;
 
 function configuration(req, res){
-	MovieDB.configuration(function(err, movies){
-		console.log(err);
-		console.log(movies);
-		if (movies === null) {
-			res.json({
+    MovieDB.configuration(function(err, movies){
+        console.log(err);
+        console.log(movies);
+        if (movies === null) {
+            res.json({
   "images": {
     "base_url": "http://image.tmdb.org/t/p/",
     "secure_base_url": "https://image.tmdb.org/t/p/",
@@ -98,32 +98,32 @@ function configuration(req, res){
     "translations"
   ]
 })
-		}
-		res.json(movies);
-	});
+        }
+        res.json(movies);
+    });
 }
 
 function get(req, res) {
     MovieDB.movieInfo({id: req.params.id}, function(err, response){
-    	res.json(response);
+        res.json(response);
     });
 }
 
 function search(req, res) {
     MovieDB.searchMovie({query: req.params.query}, function(err, response){
-    	res.json(response);
+        res.json(response);
     });
 }
 function nowPlaying(req, res) {
-	MovieDB.miscPopularMovies(function(err, movies){
-		res.json(movies);
-	});
+    MovieDB.miscPopularMovies(function(err, movies){
+        res.json(movies);
+    });
 
 }
 function index(req, res) {
 
-	MovieDB.miscTopRatedMovies(function(err, movies){
-		res.json(movies);
-	});
+    MovieDB.miscTopRatedMovies(function(err, movies){
+        res.json(movies);
+    });
 
 }

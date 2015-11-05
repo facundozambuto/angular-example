@@ -16,21 +16,21 @@
     <body ng-app="todoListDemo">
         <div class="container" ng-controller="TodoListController as todoVm">
             <div class="row">
-            	<h2>Todo List #{{todoVm.list.length}}</h2>
+                <h2>Todo List #{{todoVm.list.length}}</h2>
             </div>
 
             <div class="row">
-            	<div class="col-xs-12">
-            		<input id="input" type="text" placeholder="Type your task here..." ng-model="todoVm.itemText">
-            		<input id="add-button" class="btn btn-default" type="button" value="Add" ng-click="todoVm.add(todoVm.itemText)">
-            	</div>
-            	<div ng-repeat="item in todoVm.list track by $index" class="col-xs-12">
-            		<h4 ng-class="{done: item.done}">
-            			<input type="checkbox" ng-model="item.done">
-            			{{item.text}}
-            			<input class="btn btn-default btn-xs" type="button" value="X" ng-click="todoVm.remove($index)">
-            		</h4>
-            	</div>
+                <div class="col-xs-12">
+                    <input id="input" type="text" placeholder="Type your task here..." ng-model="todoVm.itemText">
+                    <input id="add-button" class="btn btn-default" type="button" value="Add" ng-click="todoVm.add(todoVm.itemText)">
+                </div>
+                <div ng-repeat="item in todoVm.list track by $index" class="col-xs-12">
+                    <h4 ng-class="{done: item.done}">
+                        <input type="checkbox" ng-model="item.done">
+                        {{item.text}}
+                        <input class="btn btn-default btn-xs" type="button" value="X" ng-click="todoVm.remove($index)">
+                    </h4>
+                </div>
             </div>
         </div>
     </body>

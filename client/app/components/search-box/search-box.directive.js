@@ -47,7 +47,7 @@
         function updatedQuery(){
             if(vm.query === ''){
                 vm.results = [];
-                return
+                return;
             }
 
             vm.showSearch = true;
