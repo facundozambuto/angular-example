@@ -22,16 +22,13 @@
         angular.forEach(vm.topMovies, function (each) {
             vm.topMovieNames.push(each.title);
         });
-        angular.forEach(vm.movies, function (each) {
-            vm.topMovieNames.push(each.title);
-        });
 
 
         function updatedSearch(query) {
             moviesConnector.search(query).then(function (response) {
                 vm.movies = response.data.results;
                 angular.forEach(vm.movies, function (each) {
-                    if (vm.topMovieNames.indexOf(each) === -1 ){
+                    if (vm.topMovieNames.indexOf(each) === -1){
                         vm.topMovieNames.push(each.title);
                     }
                 });

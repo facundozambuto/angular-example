@@ -10,7 +10,7 @@
         <div ng-app class="container">
             <form>
                 <h2>Text Analyzer</h2>
-                <textarea class="form-control" rows="3" ng-model="text" placeholder="Enter text to be processed"></textarea>
+                <textarea class="form-control" id="input" rows="3" ng-model="text" placeholder="Enter text to be processed"></textarea>
                 <h2>Stats</h2>
                 <h3>Chars: <span id="chars">{{text.length}}</span> Words: <span>{{(text.split(' ')).length}}</span></h3>
                 <ul>
