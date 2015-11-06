@@ -57,7 +57,8 @@ set MOVIEDB_API=72fa50138ba3dcfd588fd59a1375a810
 ````
 grunt serve
 ````
-point your browser to http://localhost:9000
+point your browser to http://localhost:9000  if you have the APIKEY
+or to  http://localhost:9000/demo/ to check available demo apps.
 
 # Tests
 ### To run tests server and client
